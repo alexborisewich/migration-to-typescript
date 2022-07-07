@@ -27,7 +27,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(endpoint: string, options?: Record<string, string>) {
+    private makeUrl(endpoint: string, options?: Record<string, string>) {
         const urlOptions: { [index: string]: string } = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
